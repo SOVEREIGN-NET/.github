@@ -1,0 +1,32 @@
+name: Release Checklist
+description: Manages deployment risks and coordinates cross-functional activities prior to a production launch.
+title: "Deployment: "
+labels: ["release"]
+projects: "SOVEREIGN-NET/8"
+body:
+  - type: checkboxes
+    id: pre_release_validations
+    attributes:
+      label: Pre-release Validations
+      description: Please verify that all deployment prerequisites have been met.
+      options:
+        - label: End-to-end integration testing signed off
+          required: true
+        - label: Documentation update verified
+          required: true
+        - label: Security and vulnerability scans passed
+          required: true
+  - type: textarea
+    id: rollback_strategy
+    attributes:
+      label: Rollback Strategy
+      description: What is the designated rollback plan if this release fails in production?
+    validations:
+      required: true
+  - type: input
+    id: target_environment
+    attributes:
+      label: Target Environment
+      description: Which environment is this being deployed to? (e.g., Production, Staging)
+    validations:
+      required: true
