@@ -2,6 +2,7 @@ name: Bug Report
 description: Report a technical defect or test failure.
 title: ": "
 labels: ["bug"]
+type: bug
 projects: "SOVEREIGN-NET/8"
 body:
   - type: textarea
