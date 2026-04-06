@@ -2,6 +2,7 @@ name: Feature Request / User Story
 description: Propose a new feature or deliverable aligned with our agile workflow.
 title: "[Feature]: "
 labels: ["enhancement"]
+type: feature
 projects: "SOVEREIGN-NET/8"
 body:
   - type: dropdown
