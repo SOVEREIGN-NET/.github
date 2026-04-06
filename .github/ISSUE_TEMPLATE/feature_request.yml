@@ -1,0 +1,45 @@
+name: Feature Request / User Story
+description: Propose a new feature or deliverable aligned with our agile workflow.
+title: "[Feature]: "
+labels: ["enhancement"]
+projects: "SOVEREIGN-NET/8"
+body:
+  - type: dropdown
+    id: persona
+    attributes:
+      label: User Persona
+      description: Who is this feature for?
+      options:
+        - External Customer
+        - Internal Admin
+        - System Automation
+    validations:
+      required: true
+  - type: textarea
+    id: business_value
+    attributes:
+      label: Business Value / Goal
+      description: What is the primary objective and business value of this feature?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What must be true for this to be considered 'Done'? (Use markdown checkboxes)
+      value: |
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+  - type: dropdown
+    id: risk
+    attributes:
+      label: Risk Assessment
+      description: What is the initial risk level of this implementation?
+      options:
+        - Low
+        - Medium
+        - High
+    validations:
+      required: true
