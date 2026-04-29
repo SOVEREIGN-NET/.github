@@ -1,0 +1,29 @@
+name: "[EPIC] Strategic Initiative"
+description: "Create a new parent Epic to group related sub-issues and track overall progress."
+title: "[EPIC] "
+labels: ["epic"]
+body:
+  - type: markdown
+    attributes:
+      value: "## Epic Definition\nPlease provide the strategic context for this epic. This will serve as the guiding document for all nested sub-issues."
+  - type: textarea
+    id: executive_summary
+    attributes:
+      label: "Executive Summary"
+      description: "A high-level overview of what this epic aims to achieve and why it is important to the Sovereign Network architecture."
+    validations:
+      required: true
+  - type: textarea
+    id: scope_boundaries
+    attributes:
+      label: "Scope & Boundaries"
+      description: "What is explicitly included in this epic? What is explicitly excluded?"
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: "Acceptance Criteria"
+      description: "What conditions must be met for this epic to be considered complete?"
+    validations:
+      required: true
