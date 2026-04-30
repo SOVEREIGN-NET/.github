@@ -1,46 +1,39 @@
-name: Feature Request / User Story
-description: Propose a new feature or deliverable aligned with our agile workflow.
-title: "[Feature]: "
-labels: ["enhancement"]
-type: feature
-projects: "SOVEREIGN-NET/8"
+name: 🚀 Feature Request
+description: Propose a new idea or enhancement for the Sovereign Network.
+labels: ["enhancement", "triage"]
 body:
-  - type: dropdown
-    id: persona
+  - type: markdown
     attributes:
-      label: User Persona
-      description: Who is this feature for?
-      options:
-        - External Customer
-        - Internal Admin
-        - System Automation
+      value: |
+        ## Feature Request
+        Please ensure you link this feature to a parent Epic using the native GitHub sub-issue interface after creation.
+  - type: input
+    id: summary
+    attributes:
+      label: Feature Summary
+      placeholder: e.g., Implement end-to-end encryption for Whisper
     validations:
       required: true
   - type: textarea
-    id: business_value
+    id: user_story
     attributes:
-      label: Business Value / Goal
-      description: What is the primary objective and business value of this feature?
-    validations:
-      required: true
+      label: User Story
+      placeholder: As a user, I want [goal] so that [benefit].
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Expected Impact
+      options:
+        - High (Core Functionality)
+        - Medium (Quality of Life)
+        - Low (Minor UI/UX)
   - type: textarea
     id: acceptance_criteria
     attributes:
       label: Acceptance Criteria
-      description: What must be true for this to be considered 'Done'? (Use markdown checkboxes)
-      value: |
-        - [ ] 
-        - [ ] 
-    validations:
-      required: true
-  - type: dropdown
-    id: risk
-    attributes:
-      label: Risk Assessment
-      description: What is the initial risk level of this implementation?
-      options:
-        - Low
-        - Medium
-        - High
+      description: List the 'Must-Haves' for completion.
+      placeholder: |
+        - Requirement 1
+        - Requirement 2
     validations:
       required: true
