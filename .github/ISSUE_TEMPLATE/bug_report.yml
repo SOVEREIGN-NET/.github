@@ -1,39 +1,109 @@
-name: Bug Report
-description: Report a technical defect or test failure.
-title: "[Bug]: "
-labels: ["bug"]
-type: bug
-projects: "SOVEREIGN-NET/8"
+name: 🐛 Bug Report
+description: Submit a bug report to help us improve the Sovereign Network.
+title: " "
+labels: ["bug", "triage"]
 body:
-  - type: textarea
-    id: current_behavior
+  - type: markdown
     attributes:
-      label: Current Behavior
-      description: What is the application doing incorrectly?
-    validations:
-      required: true
-  - type: textarea
-    id: expected_behavior
-    attributes:
-      label: Expected Behavior
-      description: What should the application be doing instead?
-    validations:
-      required: true
-  - type: textarea
-    id: steps_to_reproduce
-    attributes:
-      label: Steps to Reproduce
-      description: Please provide an ordered list of steps to replicate this issue.
       value: |
-        1. 
-        2. 
-        3. 
+        ## Submit a Bug Report
+        Thank you for reporting an issue. Please fill in as much detail as possible so we can reproduce and fix it quickly.
+        > Fields marked with * are required.
+  - type: input
+    id: summary
+    attributes:
+      label: "* Bug Summary"
+      description: A short, clear description of the bug.
+      placeholder: e.g. zhtp-cli panics when generating ZKP on macOS
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: "* Steps to Reproduce"
+      description: Exact steps to trigger the bug.
+      placeholder: |
+        1. Run command '...'
+        2. Pass parameters '...'
+        3. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: "* Expected Behavior"
+      description: What should have happened?
+      placeholder: The transaction should be verified and added to the mempool.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: "* Actual Behavior"
+      description: What actually happened?
+      placeholder: A panic occurs with 'attempt to subtract with overflow'.
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: "* Severity"
+      options:
+        - "S1 - Critical (Crash / Data Loss / Security Vulnerability)"
+        - "S2 - High (Major feature broken, no workaround)"
+        - "S3 - Medium (Feature partially broken, workaround exists)"
+        - "S4 - Low (Minor / Cosmetic / Typo)"
+    validations:
+      required: true
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: "* How often does this occur?"
+      options:
+        - "Always (100%)"
+        - "Often (>50%)"
+        - "Sometimes (10–50%)"
+        - "Rarely (<10%)"
+        - "Only once"
     validations:
       required: true
   - type: input
-    id: environment
+    id: version
     attributes:
-      label: Environment Details
-      description: OS, Browser, Version, etc.
+      label: Version / Build / Commit Hash
+      placeholder: e.g. v0.2.0 or commit 693ad5b
     validations:
-      required: true
+      required: false
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      multiple: true
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - iOS
+        - Android
+        - Other
+    validations:
+      required: false
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots / Logs
+      description: Drag-and-drop images or paste log output here.
+      placeholder: Paste logs or attach screenshots...
+    validations:
+      required: false
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Before Submitting
+      options:
+        - label: I have searched existing issues and this is not a duplicate.
+          required: true
+        - label: I have provided enough detail to reproduce this bug.
+          required: true
+        - label: I have not included any sensitive or private cryptographic keys/seeds.
+          required: true
