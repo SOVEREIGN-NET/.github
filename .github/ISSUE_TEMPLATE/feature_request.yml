@@ -1,5 +1,6 @@
 name: 🚀 Feature Request
 description: Propose a new idea or enhancement for the Sovereign Network.
+title: "[Feature] "
 labels: ["enhancement", "triage"]
 body:
   - type: markdown
